@@ -11,8 +11,9 @@ massive(process.env.CONNECTION_STRING).then(dbInstance =>{
     app.set('db', dbInstance)
 });
 
-app.get(`/api/inventory`, con.read)
+app.get('/api/inventory', con.read)
 app.post('/api/inventory', con.create)
+app.delete('/api/inventory/:id', con.delete)
 
-
-app.listen(3005, () => console.log("Listening on 3005"));
+const port = process.env.PORT || 3005
+app.listen(port, () => console.log(`Listening on ${port}`));

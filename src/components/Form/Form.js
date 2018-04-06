@@ -9,6 +9,7 @@ class Form extends Component{
             input1: "",
             input2: "",
             input3: "",
+            // productId: this.props.productId,
         }
 
     this.cancel = this.cancel.bind(this);
@@ -18,6 +19,9 @@ class Form extends Component{
     this.handleInput3 = this.handleInput3.bind(this);
     
     }
+    // componentDidUpdate(){
+
+    // }
     handleInput1(e){
         this.setState({
             input1: e
@@ -51,9 +55,9 @@ class Form extends Component{
     render(){
         return(
             <div>
-                <input type="text" value={this.state.input1} onChange={(e) => this.handleInput1(e.target.value)}/>
-                <input type="text" value={this.state.input2} onChange={(e) => this.handleInput2(e.target.value)}/>
-                <input type="text" value={this.state.input3} onChange={(e) => this.handleInput3(e.target.value)}/>
+                <input type="text" value={this.state.input1} onChange={(e) => this.handleInput1(e.target.value)} placeholder="Product Name"/>
+                <input type="text" value={this.state.input2} onChange={(e) => this.handleInput2(e.target.value)} placeholder="Price"/>
+                <input type="text" value={this.state.input3} onChange={(e) => this.handleInput3(e.target.value)} placeholder="Image URL"/>
                 <button onClick={this.cancel}>Cancel</button>
                 <button onClick={this.post}>Add to Inventory</button>
             </div>

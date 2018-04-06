@@ -12,6 +12,10 @@ export default function Product(props){
             <p>
             image_url: {props.image}
             </p>
+            <button 
+            onClick={() => {props.deleteFn(props.id)}}
+            >Delete</button>
+            <button>Edit</button>
         </div>
     )
 }
