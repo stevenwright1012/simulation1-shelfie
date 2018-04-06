@@ -9,7 +9,7 @@ class Form extends Component{
             input1: "",
             input2: "",
             input3: "",
-            // productId: this.props.productId,
+            // productEditing: this.props.productEditing,
         }
 
     this.cancel = this.cancel.bind(this);
@@ -19,7 +19,7 @@ class Form extends Component{
     this.handleInput3 = this.handleInput3.bind(this);
     
     }
-    // componentDidUpdate(){
+    // componentDidUpdate(old){
 
     // }
     handleInput1(e){
