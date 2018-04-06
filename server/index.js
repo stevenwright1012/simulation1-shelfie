@@ -12,6 +12,7 @@ massive(process.env.CONNECTION_STRING).then(dbInstance =>{
 });
 
 app.get('/api/inventory', con.read)
+app.post('/api/inventory', con.create)
 
 
 app.listen(3005, () => console.log("Listening on 3005"));

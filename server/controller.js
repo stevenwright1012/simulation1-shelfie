@@ -6,4 +6,13 @@ module.exports = {
             res.status(200).send(results)
         })
     },
+    create: (req, res) => {
+        const db = req.app.get('db')
+        const {name, price, image} = req.body
+
+        db.create_product([name, price, image]).then(() => {
+            res.status(200).send();
+        })
+        
+    }
 }

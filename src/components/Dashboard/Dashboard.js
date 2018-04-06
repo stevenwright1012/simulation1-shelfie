@@ -8,9 +8,9 @@ class Dashboard extends Component{
         var products = inventory.map((item,i) => {
             return(
                 <Product key={i}
-                name={item.name}
+                name={item.product_name}
                 price={item.price}
-                image={item.image}/>
+                image={item.image_url}/>
             )
         })
         return(
